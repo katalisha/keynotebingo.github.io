@@ -22,23 +22,14 @@
         <link rel="stylesheet" href="static/styles/styles.css">
         <link rel="shortcut icon" type="image/png" href="static/images/favicon.png">
         <link rel="apple-touch-icon-precomposed" href="static/images/apple-touch-icon.png">
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
-        <script>
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-29707119-1']);
-            _gaq.push(['_trackPageview']);
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
     </head>
     <body>
         <div class="container-fluid">
             <header>
                 <h1 class="my-4 display-4">Apple Keynote Bingo!</h1>
-                <h2 class="mb-4 h5">California Streaming – September 2021</h2>
+                <h2 class="mb-4 h5">WWDC – June 2022</h2>
             </header>
 
             <div id="bingo">
@@ -57,101 +48,42 @@
                 <p class="mt-4 small">
                     Made with love in Edinburgh, Scotland by <a target="_blank" href="http://twitter.com/patrickhmason">@patrickhmason</a> and <a target="_blank" href="http://twitter.com/davidmoss">@davidmoss</a>
                 </p>
+                <p class="mt-4 small">
+                    Forked by <a href="https://github.com/katalisha/keynotebingo.github.io">@katalisha</a>
+                </p>
             </footer>
         </div>
 
         <script>
             strings = [
-                "Tim Cook’s pronunciations of “cau-vid” burns my British ears",
-                "Skit about WFH",
-                "“Sili-cun”",
-                "Group messaging stops sucking",
-                "Augmented reality 😐",
-                "“bezel”",
-                "“Developers love the App Store, providing that there is no follow up discussion on the matter”",
-                "Tim Cook",
-                "Craig Federighi",
-                "Tim Cook’s thin, watery smile",
-                "Advert",
-                "Here comes the finance bit!",
-                "A new app that looks OK, but nothing special",
-                "“We hope you like it”",
-                "“We think it’s great”",
-                "“Here it is”",
-                "“Let me show it to you”",
-                "“Boom!/Bam!” or other onomatopoeic word",
-                "“Billion’",
-                "A tweet that just says “oooh” followed by a bunch of hashtags",
-                "Disappointment as all the rumours turn out to be EXACTLY true",
-                "Nice independent software maker totally undermined by a new feature",
-                "Smiling children in an emerging market play with an iPad",
-                "Stealthy upgrade to a product not mentioned in the Keynote",
-                "Stealthy downgrade to MacBook to retain price point",
-                "Price point slightly too high, but not high enough to stop you buying",
-                "EXCRUCIATING third party demo",
-                "New, fairly dreary, feature gets ridiculous name (e.g. “Power Station”)",
-                "“I’ll never get used to that!” *gets used to it almost immediately*",
-                "Poorly implemented cloud features",
-                "Home automate ALL THE THINGS",
-                "“Partnership”",
-                "“It’s available in beta, right now”",
-                "Everyone loses their shit about something technical",
-                "Apple Pay stats",
-                "Dreadful skit",
-                "Enterprise! Woo yeah! *rolls eyes*",
-                "New Apple TV screensavers",
-                "Super-earnest medical research VT",
-                "Beyond-acceptable pricing, magically justifying itself by Friday",
-                "HOW MUCH?!?!?",
-                "[a Drag Race GIF that perfectly illustrates something]",
-                "Losing track of the number of things Steve Jobs would never have allowed",
-                "Vague promises of innovation to come",
-                "Game demo presenters frantically trying to IPO before everyone wises up",
-                "Even the presenters look bored of the Game Demo this year",
-                "Previously called-out sales figure suspiciously moved into Misc",
-                "“Only we can do this, and then forget to add it to the Mac”",
-                "Split view is now over 45% less discoverable",
-                "New feature to help remote school teaching is completely unfit for purpose",
-                "My bingo co-writer unnervingly nails another unannounced nuance",
-                "New headphones being used for a conference call",
-                "New headphones being used by someone on a skateboard",
-                "Something is described as “pretty Epic”",
-                "Lawyers doing the cut motion just out of shot when the App Store is discussed",
-                "Who could this evil, data-hungry, unnamed advertising company be?!?",
-                "“Hey Siri, I’ve got company” finally gives you sensual lighting and music",
-                "Useful apps rewritten with fewer features",
-                "Enhanced Siri privacy for things you already assumed were private",
-                "Still impossible to use iOS as your main computer if your job is anything other than writing a blog",
-                "Still in file system denial on the iPad Pro",
-                "App Store related comments obviously passed through 5 lawyers",
-                "Pro features, but still impossible to do any sort of hotel booking or car purchase via the web",
-                "Over 50 new clunky workarounds for poorly implemented iOS/watchOS features",
-                "Multitasking still requires at least four hands",
-                "Notifications UI still infuriating",
-                "Siri gets new sports integration, but still struggles to parse “Timer 3 minutes”",
-                "“We love developers… (who don’t question us)”",
-                "App Store matters “Tim can’t go into due to ongoing legal action”",
-                "“New Apple Watch shape, just a square meh”",
-                "Annoyance that new MacBook Pros STILL aren’t released",
-                "Cut scenes just getting silly now",
-                "“Ok. Fine. We’re building a car”",
-                "Endless “this iPhone will be unlucky” jokes",
-                "Finally accepting iPhone USB-C will never be",
-                "Completely random final product tacked on",
-                "Resigned “we’re sorry you can’t be here”",
-                "“Everyone is so keen to return to Apple Park” [face to camera]",
-                "Pro-motion scrolling described as “silky smooth” or some such",
-                "New low end iPad gets talked up like a kid who “tries their best” at school sports.",
-                "Will the old watch straps fit or not",
-                "“People love the notch - it’s part of iPhone”",
-                "“Beautiful new color”",
-                "Strength of magnets shown on a Bezos Chart",
-                "“And IOS 14.8 has some great security features in advance of 15 coming out”",
-                "Any mentions of platform security hastily scrubbed out",
-                "Always on screen power demands offset by no-one actually going anywhere",
-                "Note to self: turn off always-on notifications for hook up apps",
-                "Vague changes to glass/metal composition completely changes how the iPhone feels",
-                "Vague changes to glass/metal composition completely changes how the product breaks"
+                "A-something chip",
+                "Privacy",
+                "Emojis",
+                "\"and it's available today\"",
+                "kids building apps",
+                "\"we're so excited\"",
+                "\"Billion\"",
+                "An augmented reality demo",
+                "\"Back to you, Craig\"",
+                "\"We hope you like it\"",
+                "\"Let me show it to you\"",
+                "\"Beautiful\"",
+                "\"Partners\"",
+                "\"We love developers...\"",
+                "Scenic shots of Apple Park",
+                "Over the top transition between pre-recorded segments",
+                "Notifications",
+                "Health",
+                "Dark mode",
+                "Car play",
+                "Find my",
+                "App store statistics",
+                "App clips",
+                "\"Wow\"",
+                "\"For free\"",
+                "Machine learning",
+                "\"Love it\"",
+                "\"How cool is that?\""
                 ]
 
             function shuffle(array) {
@@ -168,14 +100,29 @@
                 return array;
             }
 
+            function record(x,y) {
+                state[x][y]=true;
+            }
+
+            function isBingo(x,y) {
+                return state[x].every(elem => elem === true) ||
+                state.reduce((prev, curr) => curr[y] === true && prev === true, true) ||
+                state.reduce((prev, curr, index) => curr[index] === true && prev === true, true)
+            }
+
+            var size = 5;
+            var middle = Math.round((size-1)/2);
+            var state =  [...Array(size)].map(_ => Array(size).fill(false));
+            record(middle, middle);
+
             var shuffled_strings = shuffle(strings);
             el_playcard = document.getElementById('playCard');
-            for(var row = 0; row < 5; row += 1) {
+            for(var row = 0; row < size; row += 1) {
                 el_row = el_playcard.insertRow(-1);
 
-                for(var col = 0; col < 5; col += 1) {
+                for(var col = 0; col < size; col += 1) {
                     el_cell = el_row.insertCell(0);
-                    if(row == 2 && col == 2) {
+                    if(row == middle && col == middle) {
                         el_cell.innerHTML = 'Free<br /><br /><br />Space';
                         el_cell.classList.add('marked');
                         el_cell.classList.add('marked-free');
@@ -187,8 +134,6 @@
                 }
             }
 
-            var bingo_counter = 0;
-
             var marked_sound = new Audio('static/sounds/eep.wav');
             marked_sound.load();
             var bingo_sound = new Audio('static/sounds/indigo.wav');
@@ -197,20 +142,21 @@
             function mark_cell(cell) {
                 cell.srcElement.removeEventListener('click', mark_cell);
                 cell.srcElement.classList.add('marked');
-                bingo_counter++;
+                var x = cell.srcElement.cellIndex;
+                var y = cell.srcElement.parentElement.rowIndex;
+                record(x,y);
 
-                if(bingo_counter === 24) {
-                    document.querySelectorAll('td').forEach(function (e) {
-                        e.classList.add('rotate-out');
-                    });
+                if(isBingo(x,y)) {
                     bingo_sound.play();
+                    confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                    });
                     window.setTimeout(function() {
                         play_again = document.getElementById('bingo');
                         play_again.classList.add('bounce-in');
                         play_again.style.display = 'block';
-
-                        bingoCard = document.getElementById('bingoCard');
-                        bingoCard.style.visibility = 'hidden';
                     }, 400);
                 }
                 else {

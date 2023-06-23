@@ -1,168 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Apple Keynote Bingo!</title>
-        <meta name="description" content="Play Apple Keynote Bingo!" />
 
-        <meta property="og:title" content="Apple Keynote Bingo!" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Apple Keynote Bingo!" />
-        <meta property="og:url" content="https://keynotebingo.github.io/" />
-        <meta property="og:description" content="It’s time to play Apple Keynote Bingo!" />
-        <meta property="og:image" content="static/images/share.jpg" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apple Keynote Bingo!</title>
 
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:url" content="https://keynotebingo.github.io/">
-        <meta name="twitter:title" content="Apple Keynote Bingo!">
-        <meta name="twitter:description" content="It’s time to play Apple Keynote Bingo!">
-        <meta name="twitter:image" content="static/images/share.jpg">
+    <link rel="stylesheet" href="static/styles/styles.css">
+    <link rel="shortcut icon" type="image/png" href="static/images/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="static/images/apple-touch-icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
-        <link rel="stylesheet" href="static/styles/styles.css">
-        <link rel="shortcut icon" type="image/png" href="static/images/favicon.png">
-        <link rel="apple-touch-icon-precomposed" href="static/images/apple-touch-icon.png">
-        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
 
-    </head>
-    <body>
-        <div class="container-fluid">
-            <header>
-                <h1 class="my-4 display-4">Apple Keynote Bingo!</h1>
-                <h2 class="mb-4 h5">WWDC – June 2022</h2>
-            </header>
+<body>
+    <div class="container-fluid">
+        <header>
+            <h1 class="my-4 display-4">Apple Keynote Bingo!</h1>
+            <h2 class="mb-4 h5">WWDC – June
+                <script>document.write(new Date().getFullYear());</script>
+            </h2>
+        </header>
 
-            <div id="bingo">
-                <h1 class="my-4 display-1">BINGO!</h1>
-                <a class="btn btn-dark" href="?">Play again?</a>
-            </div>
-
-            <table id="bingoCard" class="table-responsive my-4 mx-auto">
-                <tbody id="playCard">
-                </tbody>
-            </table>
-
-            <footer>
-                <a class="btn btn-outline-dark mr-2" href="?">New Bingo Card</a>
-                <a class="btn btn-outline-dark ml-2" target="_blank" href="https://github.com/katalisha/keynotebingo.github.io">View on Github</a>
-                <p class="mt-4 small">
-                    Made with love in Edinburgh, Scotland by <a target="_blank" href="http://twitter.com/patrickhmason">@patrickhmason</a> and <a target="_blank" href="http://twitter.com/davidmoss">@davidmoss</a>
-                </p>
-                <p class="mt-4 small">
-                    Forked by <a href="https://github.com/katalisha/keynotebingo.github.io">@katalisha</a>
-                </p>
-            </footer>
+        <div id="bingo">
+            <h1 class="my-4 display-1">BINGO!</h1>
+            <a class="btn btn-dark" href="?">Play again?</a>
         </div>
 
-        <script>
-            strings = [
-                "A-something chip",
-                "Privacy",
-                "Emojis",
-                "\"and it's available today\"",
-                "Kids building apps",
-                "\"We're so excited\"",
-                "\"Billion\"",
-                "An augmented reality demo",
-                "\"Back to you, Craig\"",
-                "\"We hope you like it\"",
-                "\"Let me show it to you\"",
-                "\"Beautiful\"",
-                "\"Partners\"",
-                "\"We love developers...\"",
-                "Scenic shots of Apple Park",
-                "Over the top transition between pre-recorded segments",
-                "Notifications",
-                "Health",
-                "Dark mode",
-                "Car play",
-                "Find my",
-                "App store statistics",
-                "App clips",
-                "\"Wow\"",
-                "\"For free\"",
-                "Machine learning",
-                "\"Love it\"",
-                "\"How cool is that?\""
-                ]
+        <table id="bingoCard" class="table-responsive my-4 mx-auto">
+            <tbody id="playCard">
+            </tbody>
+        </table>
 
-            function shuffle(array) {
-                var currentIndex = array.length;
-                var temporaryValue;
-                var randomIndex;
-                while (0 !== currentIndex) {
-                    randomIndex = Math.floor(Math.random() * currentIndex);
-                    currentIndex -= 1;
-                    temporaryValue = array[currentIndex];
-                    array[currentIndex] = array[randomIndex];
-                    array[randomIndex] = temporaryValue;
-                }
-                return array;
+        <footer>
+            <a class="btn btn-outline-dark mr-2" href="?">New Bingo Card</a>
+            <a class="btn btn-outline-dark ml-2" target="_blank"
+                href="https://github.com/katalisha/keynotebingo.github.io">View on Github</a>
+            <p class="mt-4 small">
+                Made with love in Edinburgh, Scotland by <a target="_blank"
+                    href="http://twitter.com/patrickhmason">@patrickhmason</a> and <a target="_blank"
+                    href="http://twitter.com/davidmoss">@davidmoss</a>
+            </p>
+            <p class="mt-4 small">
+                Forked by <a href="https://github.com/katalisha/keynotebingo.github.io">@katalisha</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        strings = [
+            "Privacy",
+            "Memoji",
+            "\"...and it's available today\"",
+            "Kids building apps",
+            "\"We're so excited\"",
+            "\"Billion\"",
+            "An augmented reality demo",
+            "\"Back to Craig\"",
+            "\"We hope you like it\"",
+            "\"Let me show it to you\"",
+            "\"Beautiful\"",
+            "\"Partners\"",
+            "\"We love developers...\"",
+            "Scenic shots of Apple Park",
+            "Over the top transition between pre-recorded segments",
+            "Notifications",
+            "Health",
+            "Car play",
+            "Find my",
+            "App store statistics",
+            "\"Wow\"",
+            "\"For free\"",
+            "\"Love it\"",
+            "\"How cool is that?\"",
+            "\"Incredible\"",
+            "\"Not just one...\"",
+            "\"Precious moment/s\"",
+            "\"Faster than ever\"",
+            "\"Exciting updates\"",
+            "\"Better than ever\"",
+            "Stickers",
+            "Craig running",
+            "\"Even more\""
+        ]
+
+        function shuffle(array) {
+            var currentIndex = array.length;
+            var temporaryValue;
+            var randomIndex;
+            while (0 !== currentIndex) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
             }
+            return array;
+        }
 
-            function record(x,y) {
-                state[x][y]=true;
-            }
+        function record(x, y) {
+            state[x][y] = true;
+        }
 
-            function isBingo(x,y) {
-                return state[x].every(elem => elem === true) ||
+        function isBingo(x, y) {
+            return state[x].every(elem => elem === true) ||
                 state.reduce((prev, curr) => curr[y] === true && prev === true, true) ||
                 state.reduce((prev, curr, index) => curr[index] === true && prev === true, true)
-            }
+        }
 
-            var size = 5;
-            var middle = Math.round((size-1)/2);
-            var state =  [...Array(size)].map(_ => Array(size).fill(false));
-            record(middle, middle);
+        var size = 5;
+        var middle = Math.round((size - 1) / 2);
+        var state = [...Array(size)].map(_ => Array(size).fill(false));
+        record(middle, middle);
 
-            var shuffled_strings = shuffle(strings);
-            el_playcard = document.getElementById('playCard');
-            for(var row = 0; row < size; row += 1) {
-                el_row = el_playcard.insertRow(-1);
+        var shuffled_strings = shuffle(strings);
+        el_playcard = document.getElementById('playCard');
+        for (var row = 0; row < size; row += 1) {
+            el_row = el_playcard.insertRow(-1);
 
-                for(var col = 0; col < size; col += 1) {
-                    el_cell = el_row.insertCell(0);
-                    if(row == middle && col == middle) {
-                        el_cell.innerHTML = 'Free<br /><br /><br />Space';
-                        el_cell.classList.add('marked');
-                        el_cell.classList.add('marked-free');
-                    }
-                    else {
-                        el_cell.innerHTML = shuffled_strings.pop();
-                        el_cell.addEventListener('click', mark_cell, false);
-                    }
+            for (var col = 0; col < size; col += 1) {
+                el_cell = el_row.insertCell(0);
+                if (row == middle && col == middle) {
+                    el_cell.innerHTML = 'Free<br /><br /><br />Space';
+                    el_cell.classList.add('marked');
+                    el_cell.classList.add('marked-free');
+                }
+                else {
+                    el_cell.innerHTML = shuffled_strings.pop();
+                    el_cell.addEventListener('click', mark_cell, false);
                 }
             }
+        }
 
-            var marked_sound = new Audio('static/sounds/eep.wav');
-            marked_sound.load();
-            var bingo_sound = new Audio('static/sounds/indigo.wav');
-            bingo_sound.load();
+        var marked_sound = new Audio('static/sounds/eep.wav');
+        marked_sound.load();
+        var bingo_sound = new Audio('static/sounds/indigo.wav');
+        bingo_sound.load();
 
-            function mark_cell(cell) {
-                cell.srcElement.removeEventListener('click', mark_cell);
-                cell.srcElement.classList.add('marked');
-                var x = cell.srcElement.cellIndex;
-                var y = cell.srcElement.parentElement.rowIndex;
-                record(x,y);
+        function mark_cell(cell) {
+            cell.srcElement.removeEventListener('click', mark_cell);
+            cell.srcElement.classList.add('marked');
+            var x = cell.srcElement.cellIndex;
+            var y = cell.srcElement.parentElement.rowIndex;
+            record(x, y);
 
-                if(isBingo(x,y)) {
-                    bingo_sound.play();
-                    confetti({
+            if (isBingo(x, y)) {
+                bingo_sound.play();
+                confetti({
                     particleCount: 100,
                     spread: 70,
                     origin: { y: 0.6 }
-                    });
-                    window.setTimeout(function() {
-                        play_again = document.getElementById('bingo');
-                        play_again.classList.add('bounce-in');
-                        play_again.style.display = 'block';
-                    }, 400);
-                }
-                else {
-                    marked_sound.play();
-                }
+                });
+                window.setTimeout(function () {
+                    play_again = document.getElementById('bingo');
+                    play_again.classList.add('bounce-in');
+                    play_again.style.display = 'block';
+                }, 400);
             }
-        </script>
-    </body>
+            else {
+                marked_sound.play();
+            }
+        }
+    </script>
+</body>
+
 </html>
